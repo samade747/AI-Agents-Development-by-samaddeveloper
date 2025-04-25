@@ -6,7 +6,7 @@ def create_planner_agent():
     return Agent(
         name="Planner",
         role="Creates travel itineraries",
-        model=Ollama(id="llama3", temperature=0.7, max_tokens=1024),  # ✅ Correct usage
+        model=Ollama(id="llama3"),  # ✅ Removed unsupported kwargs
         description=dedent("""\
             You are a travel planner. Create detailed itineraries based on research data.
         """),

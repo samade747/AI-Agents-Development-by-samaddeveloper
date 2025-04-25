@@ -1,0 +1,12 @@
+## 2. `requirements.txt`
+```txt
+fastapi
+uvicorn[standard]
+python-dotenv
+openai
+langchain
+pypdf2
+requests
+beautifulsoup4
+serpapi
+```  
