@@ -83,8 +83,8 @@ def run_agent(user_input):
         return message.content
 
 # Streamlit UI
-st.set_page_config(page_title="Your websearch AI Assistant", page_icon="🤖")
-st.title("🤖Your websearch AI Assistant")
+st.set_page_config(page_title="Your research AI Assistant", page_icon="🤖")
+st.title("🤖Your research AI Assistant")
 
 user_input = st.text_input("Ask me anything... Status🤖 Api not connected(issues unpaid)", "")
 
