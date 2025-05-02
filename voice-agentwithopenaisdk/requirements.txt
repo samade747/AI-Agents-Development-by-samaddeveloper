@@ -1,14 +1,33 @@
+# Core App Framework
 streamlit>=1.33.0
+
+# OpenAI SDK
 openai>=1.22.0
+
+# Environment Variables
 python-dotenv>=1.0.1
+
+# Vector DB and Embeddings
 qdrant-client>=1.8.0
+
+# LangChain and PDF Processing
 langchain>=0.1.13
 langchain-community>=0.0.27
 pypdf>=3.17.1
+
+# Embedding and Async Support
 fastembed>=0.1.0
 asyncio
+
+# Miscellaneous Utilities
 uuid
+
+# PDF, Audio, and File Handling
 fpdf>=1.7.2
 ffmpeg-python>=0.2.0
+
+# Machine Learning
 torch>=2.1.0
+
+# Whisper (for voice processing)
 whisper @ git+https://github.com/openai/whisper.git
