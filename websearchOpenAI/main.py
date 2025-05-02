@@ -1,13 +1,29 @@
-# app.py
 import streamlit as st
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
 from tools import web_search, file_search
 
+# Load environment variables from .env file
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
+# Get OpenAI API Key
+api_key = os.getenv("OPENAI_API_KEY")
+
+# Display API Key load status
+st.set_page_config(page_title="Your research AI Assistant", page_icon="🤖")
+st.sidebar.title("🔐 API Status")
+st.sidebar.write("API Key Loaded:", "✅" if api_key else "❌")
+
+# If API Key not loaded, show error and stop app
+if not api_key:
+    st.error("❌ API Key not loaded. Please check your `.env` file.")
+    st.stop()
+
+# Initialize OpenAI client
+client = OpenAI(api_key=api_key)
+
+# Define tools
 tools = [
     {
         "type": "function",
@@ -44,6 +60,7 @@ tools = [
     },
 ]
 
+# Run agent function
 def run_agent(user_input):
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
@@ -83,10 +100,9 @@ def run_agent(user_input):
         return message.content
 
 # Streamlit UI
-st.set_page_config(page_title="Your research AI Assistant", page_icon="🤖")
-st.title("🤖Your research AI Assistant")
+st.title("🤖 Your Research AI Assistant")
 
-user_input = st.text_input("Ask me anything... Status🤖 Api not connected(issues unpaid)", "")
+user_input = st.text_input("Ask me anything...")
 
 if user_input:
     with st.spinner("Thinking..."):
