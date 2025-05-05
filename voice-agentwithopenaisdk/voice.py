@@ -108,7 +108,7 @@ def store_embeddings(client, model, documents, collection_name):
         )
 
 def setup_agents(openai_api_key):
-    os.environ["OPENAI_API_KEY"] = openai_api_key
+    os.environ["OPENAI_API_KEY"] =  openai_api_key
 
     processor = Agent(
         name="Processor",
