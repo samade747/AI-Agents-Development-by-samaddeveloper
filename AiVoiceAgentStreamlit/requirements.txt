@@ -1,5 +1,0 @@
-streamlit
-streamlit-webrtc
-openai
-gTTS
-requests
