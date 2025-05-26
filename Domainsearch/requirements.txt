@@ -1,5 +1,10 @@
 streamlit
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchainhub
+langchain-openai
 openai
+google-search-results
 python-dotenv
-agno
-composio_agno
+tqdm
+httpx
