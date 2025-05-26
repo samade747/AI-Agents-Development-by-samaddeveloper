@@ -1,5 +1,5 @@
-composio
-agno
 streamlit
-composio-agno
-together
+openai
+python-dotenv
+agno
+composio_agno
