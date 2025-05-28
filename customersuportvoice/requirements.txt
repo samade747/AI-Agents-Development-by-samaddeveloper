@@ -1,0 +1,9 @@
+openai
+streamlit
+TTS
+whisper
+sounddevice
+scipy
+python-dotenv
+requests
+fpdf
